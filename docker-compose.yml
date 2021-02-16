@@ -1,0 +1,20 @@
+version: '3'
+services: #holds our containers
+  web:
+    # build: . #if you had just Dockerfile 
+    build:
+      context: . #find all the files for our project
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules #do not modify node_modules
+      - .:/app #map the current folder on your computer (outside the container) to /app folder inside the container
+  tests:
+    build:
+      context: . #find all the files for our project
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules #do not modify node_modules
+      - .:/app #map the current folder on your computer (outside the container) to /app folder inside the container
+    command: ["npm", "run", "test"]
