@@ -5,4 +5,4 @@ services:
 before_install:
   - docker build -t nelobaba/docker-react -f Dockerfile.dev .
 script:
-  - docker run -e CI=true nelobaba/docker-react npm run test -- --coverage #npm run test normally
+  - docker run -e CI=true nelobaba/docker-react npm run test
