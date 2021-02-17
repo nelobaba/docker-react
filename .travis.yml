@@ -10,10 +10,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "ca-central-1"
-  app: "docker"
-  env: "Docker-env"
+  app: "dockerize"
+  env: "Dockerize-env"
   bucket_name: "elasticbeanstalk-ca-central-1-645095867705"
-  bucket_path: "docker"
+  bucket_path: "dockerize"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
