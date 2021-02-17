@@ -7,7 +7,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome Nelson Umunna.
+          Welcome Nelson Umunna. 
+          This is a sample CICD workflow
         </p>
         <a
           className="App-link"
